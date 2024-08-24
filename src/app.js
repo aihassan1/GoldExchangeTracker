@@ -9,9 +9,6 @@ const app = express();
 
 app.use(express.json());
 
-console.log('GOLD_API_TOKEN:', process.env.GOLD_API_TOKEN);
-
-
 // Routes
 app.use('/exchange-rate', exchangeRateRoutes);
 app.use('/gold-prices', goldPricesRoutes);

@@ -4,6 +4,8 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
+const GOLD_API_TOKEN = process.env.GOLD_API_TOKEN;
+
 async function getGoldPrices() {
   const options = {
     hostname: 'www.goldapi.io',
