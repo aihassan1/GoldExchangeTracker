@@ -1,4 +1,4 @@
-import { getGoldPrices } from '../services/getGoldPrices';
+import  getGoldPrices  from '../services/getGoldPrices.js';
 
 class GoldController {
   static async getGoldPrices(req, res) {

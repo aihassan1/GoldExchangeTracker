@@ -4,9 +4,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const GOLD_API_TOKEN = process.env.GOLD_API_TOKEN;
-
-export async function getGoldPrices() {
+async function getGoldPrices() {
   const options = {
     hostname: 'www.goldapi.io',
     path: '/api/XAU/EGP',
@@ -53,6 +51,8 @@ export async function getGoldPrices() {
     request.end();
   });
 }
+
+export default getGoldPrices;
 
 // (async () => {
 //   try {

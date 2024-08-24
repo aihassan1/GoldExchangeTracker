@@ -1,8 +1,14 @@
-import { getExchangeRate } from '../services/getExchangeRate';
-
+import getExchangeRate from '../services/getExchangeRate.js';
 class ExchangeRateController {
   static async exchangeRate(req, res) {
-    const exchangeRate = await getExchangeRate();
-    
+    try {
+      const exchangeRate = await getExchangeRate();
+      res.status(200).json(exchangeRate);
+    } catch (err) {
+      console.log(err);
+      res.status(500).json({ error: 'Internal Server Error' });
+    }
   }
 }
+
+export default ExchangeRateController;
