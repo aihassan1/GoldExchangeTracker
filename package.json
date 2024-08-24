@@ -1,0 +1,27 @@
+{
+  "name": "gold-price-predictor",
+  "version": "1.0.0",
+  "description": "A project to fetch gold prices and predict trends",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gold",
+    "price",
+    "prediction",
+    "api"
+  ],
+  "author": "Abdelrahman Ibrahim",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.5"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
