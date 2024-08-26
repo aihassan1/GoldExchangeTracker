@@ -1,4 +1,6 @@
 import { VertexAI } from '@google-cloud/vertexai';
+import dotenv from 'dotenv';
+dotenv.config();
 
 // TODO: Replace with your project ID
 const projectId = 'decent-micron-433601-e8';
@@ -15,7 +17,7 @@ async function generateContent() {
   });
 
   // The prompt
-  const prompt = 'how can i improve my skills';
+  const prompt = 'what is the capital of Egypt?';
 
   try {
     // Generate content

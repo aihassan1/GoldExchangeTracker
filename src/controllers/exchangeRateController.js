@@ -1,4 +1,4 @@
-import getExchangeRate from '../services/getExchangeRate.js';
+import {getExchangeRate} from '../services/getExchangeRate.js';
 class ExchangeRateController {
   static async exchangeRate(req, res) {
     try {

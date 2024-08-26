@@ -5,4 +5,6 @@ const router = express.Router();
 
 router.get('/', GoldController.getGoldPrices);
 
+router.get('/timeframe', GoldController.getGoldPricesTimeframe);
+
 export default router;
