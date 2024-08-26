@@ -1,3 +1,4 @@
+import AIAnalysis from '../services/AIAnalysisService.js';
 import {
   getGoldPrices,
   getGoldPricesTimeframe,
@@ -24,15 +25,15 @@ class GoldController {
           .json({ error: 'Missing start_date or end_date' });
       }
       const goldPrices = await getGoldPricesTimeframe(start_date, end_date);
-      res.status(200).json(goldPrices);
+      const analysis = await AIAnalysis.analyzeData(goldPrices, 'goldPrices');
+      console.log(analysis);
+      res.status(200).json({ goldPrices, analysis });
     } catch (err) {
       console.log(err);
-      res
-        .status(500)
-        .json({
-          error: 'Failed to fetch gold prices by timeframe',
-          details: err.message,
-        });
+      res.status(500).json({
+        error: 'Failed to fetch gold prices by timeframe',
+        details: err.message,
+      });
     }
   }
 }

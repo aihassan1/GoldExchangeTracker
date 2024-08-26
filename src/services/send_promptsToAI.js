@@ -30,5 +30,3 @@ async function generateContent() {
     console.error('An error occurred:', error);
   }
 }
-
-generateContent();

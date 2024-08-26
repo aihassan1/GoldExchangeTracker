@@ -5,4 +5,6 @@ const router = express.Router();
 
 router.get('/', ExchangeRateController.exchangeRate);
 
+router.get('/timeframe', ExchangeRateController.getExchangeRateTimeframe);
+
 export default router;
