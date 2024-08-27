@@ -6,11 +6,21 @@ This API provides current and historical exchange rates for USD to EGP, as well 
 
 ## Features
 
+- AI-powered analysis using Vertex AI
 - Real-time USD to EGP exchange rates
 - Historical USD to EGP exchange rate data
 - Current gold prices in EGP (24k, 21k, 18k)
 - Historical gold price data in EGP
-- AI-powered analysis using Vertex AI
+
+## AI Analysis
+
+Each response includes an AI-powered analysis provided by Vertex AI, offering:
+
+- Overall trend analysis
+- Current market direction
+- Key observations
+- Future price predictions
+- Confidence level of predictions
 
 ## Prerequisites
 
@@ -46,16 +56,6 @@ This API provides current and historical exchange rates for USD to EGP, as well 
   - `start_date`: Start date (YYYY-MM-DD)
   - `end_date`: End date (YYYY-MM-DD)
 - Response: Gold prices in EGP for the specified period
-
-## AI Analysis
-
-Each response includes an AI-powered analysis provided by Vertex AI, offering:
-
-- Overall trend analysis
-- Current market direction
-- Key observations
-- Future price predictions
-- Confidence level of predictions
 
 ## Error Handling
 
