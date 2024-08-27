@@ -13,4 +13,5 @@ app.use(express.json());
 app.use('/exchange-rate', exchangeRateRoutes);
 app.use('/gold-prices', goldPricesRoutes);
 
+
 export default app;
