@@ -11,10 +11,17 @@ function fetchData(endpoint) {
       return res.json();
     })
     .then((data) => {
-      document.getElementById('result').textContent = JSON.stringify(
+      if (data.AI_Analysis) {
+        data.AI_Analysis = '<br>' + data.AI_Analysis.replace(/\n/g, '<br>');
+        data.AI_Analysis = data.AI_Analysis.replace(
+          /\*\*(.*?)\*\*/g,
+          '<strong>$1</strong>'
+        );
+      }
+      document.getElementById('result').innerHTML = JSON.stringify(
         data,
         null,
-        2
+        1
       );
     })
     .catch((err) => {

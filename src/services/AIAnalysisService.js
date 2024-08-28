@@ -30,8 +30,7 @@ class AIAnalysis {
       const response = await result.response;
       const textResponse = response.candidates[0].content.parts[0].text;
 
-      console.log(textResponse);
-
+      // console.log(textResponse);
       // Return the response
       return textResponse;
     } catch (error) {
@@ -50,7 +49,7 @@ ${JSON.stringify(data, null, 2)}
 Provide a concise summary of insights in plain text, without any formatting symbols. Structure your response as follows:
 
 1. Overall Trend:
-   [Describe whether prices are generally increasing, decreasing, or stable]
+   [Describe whether prices are generally increasing, decreasing, or stable and mention the amount of change ] 
 
 2. Current Direction:
    [State whether prices are currently going up, down, or staying the same]
@@ -68,7 +67,7 @@ Provide a concise summary of insights in plain text, without any formatting symb
 
 Make a prediction regardless of the amount of data provided. If the data is limited, base the prediction on the visible trend and mention that it's a short-term forecast.
 
-Use clear, simple language suitable for a general audience. Avoid technical jargon and keep each section concise for easy reading on a webpage.`;
+Use clear, concise, simple language suitable for a general audience. Avoid technical jargon and keep each section concise for easy reading on a webpage.`;
 
       case 'exchangeRates':
         return `Analyze the following USD to EGP exchange rate data:

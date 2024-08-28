@@ -25,9 +25,11 @@ class GoldController {
           .json({ error: 'Missing start_date or end_date' });
       }
       const goldPrices = await getGoldPricesTimeframe(start_date, end_date);
-      const analysis = await AIAnalysis.analyzeData(goldPrices, 'goldPrices');
-      console.log(analysis);
-      res.status(200).json({ goldPrices, analysis });
+      const AI_Analysis = await AIAnalysis.analyzeData(
+        goldPrices,
+        'goldPrices'
+      );
+      res.status(200).json({ goldPrices, AI_Analysis });
     } catch (err) {
       console.log(err);
       res.status(500).json({
