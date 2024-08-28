@@ -2,6 +2,7 @@ import {
   getExchangeRate,
   getExchangeRateTimeframe,
 } from '../services/getExchangeRate.js';
+import AIAnalysis from '../services/AIAnalysisService.js';
 class ExchangeRateController {
   static async exchangeRate(req, res) {
     try {
@@ -25,8 +26,14 @@ class ExchangeRateController {
         start_date,
         end_date
       );
-      return res.status(200).json(exchangeRates);
+      const AI_Analysis = await AIAnalysis.analyzeData(
+        exchangeRates,
+        'exchangeRates'
+      );
+
+      return res.status(200).json({ exchangeRates, AI_Analysis });
     } catch (err) {
+      console.log(err);
       return res.status(500).json({
         error: 'error fetching the exchange rate per time frame',
         details: err.message,

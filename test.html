@@ -4,25 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exchange Rate & Gold Price API</title>
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/test.css" />
   </head>
   <body>
     <div class="container">
       <h1>Exchange Rate & Gold Price API</h1>
+      <div class="date-inputs">
+        <label for="start-date">Start Date</label>
+        <input
+          type="date"
+          id="start-date"
+          name="start-date"
+          onchange="logStartDate()"
+        />
+
+        <label for="end-date">End Date</label>
+        <input type="date" id="end-date" name="end-date" />
+
+        <p class="note">Note: The timeframe must be less than 6 days.</p>
+      </div>
       <div class="btn-group">
         <button class="btn" onclick="fetchData('/exchange-rate')">
           Current Exchange Rate
         </button>
-
-        <button class="btn" onclick="fetchData('/gold-prices')">
-          Current Gold Prices
-        </button>
-
         <button
           class="btn"
           onclick="fetchHistoricalData('/exchange-rate/timeframe')"
         >
           Historical Exchange Rates
+        </button>
+        <button class="btn" onclick="fetchData('/gold-prices')">
+          Current Gold Prices
         </button>
         <button
           class="btn"
@@ -30,19 +42,9 @@
         >
           Historical Gold Prices
         </button>
-
-        <div class="date-inputs">
-          <label for="start-date">Start Date</label>
-          <input type="date" id="start-date" name="start-date" />
-
-          <label for="end-date">End Date</label>
-          <input type="date" id="end-date" name="end-date" />
-
-          <p class="note">Note: The timeframe must be less than 6 days.</p>
-        </div>
       </div>
       <div id="result"></div>
     </div>
-    <script src="./script.js"></script>
+    <script src="./test.js"></script>
   </body>
 </html>

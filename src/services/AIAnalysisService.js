@@ -1,5 +1,6 @@
 import { VertexAI } from '@google-cloud/vertexai';
 import dotenv from 'dotenv';
+import { text } from 'express';
 
 dotenv.config();
 
@@ -27,9 +28,12 @@ class AIAnalysis {
       // Generate content
       const result = await generativeModel.generateContent(prompt);
       const response = await result.response;
+      const textResponse = response.candidates[0].content.parts[0].text;
+
+      console.log(textResponse);
 
       // Return the response
-      return response.candidates[0].content.parts[0].text;
+      return textResponse;
     } catch (error) {
       console.error('AI analysis error:', error);
       throw new Error(`Failed to analyze ${dataType}`);

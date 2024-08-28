@@ -1,3 +1,25 @@
+.date-inputs {
+  margin-bottom: 20px;
+}
+
+.date-inputs label {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.date-inputs input {
+  margin-right: 20px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.note {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 5px;
+}
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -43,31 +65,4 @@ h1 {
   background-color: #ecf0f1;
   border-radius: 5px;
   white-space: pre-wrap;
-}
-
-.date-inputs {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  margin-left: 180px;
-}
-
-.date-inputs label {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.date-inputs input {
-  margin-right: 20px;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.note {
-  font-size: 0.9em;
-  color: #666;
-  margin-top: 5px;
 }
