@@ -4,6 +4,9 @@
 
 This API provides current and historical exchange rates for USD to EGP, as well as gold prices in EGP. It leverages Google Cloud's Vertex AI for data analysis, offering valuable insights into currency and gold price trends.
 
+you Can watch a live demo of the project here
+https://www.awesomescreenshot.com/video/30961658?key=ab9f252e120a41bed0fbd23147d02380
+
 ## Features
 
 - AI-powered analysis using Vertex AI
